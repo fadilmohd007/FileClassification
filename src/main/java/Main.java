@@ -32,11 +32,11 @@ public class Main {
             Thread wikifetch = new Thread(new RunWiki(filename,extension));
             wikifetch.start();
 
-//            Thread fileInfofetch = new Thread(new RunFileInfo(filename,extension));
-//            fileInfofetch.start();
-//
-//            Thread fileConverterfetch = new Thread(new RunFileConverter(filename,extension));
-//            fileConverterfetch.start();
+            Thread fileInfofetch = new Thread(new RunFileInfo(filename,extension));
+            fileInfofetch.start();
+
+            Thread fileConverterfetch = new Thread(new RunFileConverter(filename,extension));
+            fileConverterfetch.start();
 
 
         }
